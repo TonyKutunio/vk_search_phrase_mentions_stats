@@ -37,7 +37,7 @@ def get_dates_range(start_timestamp, days_range):
     return dates_range
 
 
-def get_vk_response_content(search_phrase,
+def get_vk_response_contents(search_phrase,
                             dates_range,
                             vk_service_token):
     url = 'https://api.vk.com/method/newsfeed.search'
@@ -95,7 +95,7 @@ def main():
                                           start_date.day)
 
     dates_range = get_dates_range(start_date_timestamp, days_range)
-    vk_response_content = get_vk_response_content(search_phrase,
+    vk_response_content = get_vk_response_contents(search_phrase,
                                                               dates_range,
                                                               vk_service_token)
 
